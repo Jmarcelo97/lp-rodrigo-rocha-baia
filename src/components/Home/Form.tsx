@@ -17,11 +17,9 @@ export function HomeForm() {
     const { register, handleSubmit, formState } = useForm<RegisterFormData>();
 
     const handleRegister: SubmitHandler<RegisterFormData> = async ({ name, email}) => {
-        api.post("/api/3/contacts", JSON.stringify({
-            contact: {
-                email: email,
-                firstName: name
-            }
+        api.post("/api/subscribe", JSON.stringify({
+            email,
+            name
         })).then(() => {
             Router.push("/obrigado");
         }).catch(error => {

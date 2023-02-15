@@ -1,5 +1,8 @@
-import Image from "next/image";
 import { GetStaticProps } from "next/types";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+import useWindowSize from "@rooks/use-window-size";
+const Confetti = dynamic(() => import("react-confetti"), { ssr: false });
 
 import { Head } from "../components/Head";
 import { ThankYouCard } from "../components/ThankYou/Card";
@@ -7,8 +10,16 @@ import { ThankYouCard } from "../components/ThankYou/Card";
 import Logo from "../assets/images/logo.png";
 
 export default function ThankYou() {
+    const { innerWidth, innerHeight } = useWindowSize();
+
     return (
         <>
+            <Confetti
+                width={innerWidth || 0}
+                height={innerHeight || 0}
+                numberOfPieces={800}
+                recycle={false}
+            />
             <Head title="Obrigado" />
             <main className="bg-gradient-to-l from-[#016D6A] to-black h-screen w-screen">
                 <div className="flex flex-col items-center justify-center h-full w-full mx-auto max-w-4xl">
