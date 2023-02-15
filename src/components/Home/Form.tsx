@@ -1,10 +1,12 @@
 import Image from "next/image";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 import { Input } from "../Input";
+import { api } from "../../services/api";
 
 import Logo from "../../assets/images/logo.png";
 import Calendar from "../../assets/images/calendar.png";
-import { SubmitHandler, useForm } from "react-hook-form";
+import Router from "next/router";
 
 type RegisterFormData = {
     name: string;
@@ -14,8 +16,17 @@ type RegisterFormData = {
 export function HomeForm() {
     const { register, handleSubmit, formState } = useForm<RegisterFormData>();
 
-    const handleRegister: SubmitHandler<RegisterFormData> = async (data) => {
-        console.log(data);
+    const handleRegister: SubmitHandler<RegisterFormData> = async ({ name, email}) => {
+        api.post("/api/3/contacts", JSON.stringify({
+            contact: {
+                email: email,
+                firstName: name
+            }
+        })).then(() => {
+            Router.push("/obrigado");
+        }).catch(error => {
+            console.log(error);
+        });
     };
 
     return (
