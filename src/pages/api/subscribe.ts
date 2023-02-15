@@ -1,9 +1,8 @@
-/* eslint-disable import/no-anonymous-default-export */
 // CREATE A NEXT API ROUTE TO SUBSCRIBE IN ACTIVE CAMPAIGN
 import { NextApiRequest, NextApiResponse } from "next";
 import { api } from "../../services/api";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default function SubscribeUser(req: NextApiRequest, res: NextApiResponse) {
 
     // GET THE NAME AND EMAIL FROM THE REQUEST BODY
     const { name, email } = req.body;
@@ -26,11 +25,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                 firstName: name
             }
         };
-        api.post("/contacts", data);
-
-        // RETURN A SUCCESS MESSAGE
-        return res.status(201).json({
-            message: "Successfully subscribed"
+        api.post("/contacts", data).then(() => {
+            // RETURN A SUCCESS MESSAGE
+            return res.status(201).json({
+                message: "Successfully subscribed"
+            });
+        }).catch((error) => {
+            // RETURN A GENERIC ERROR IF SOMETHING WENT WRONG
+            return res.status(500).json({ error: "Something went wrong" });
         });
     } catch (error) {
 
