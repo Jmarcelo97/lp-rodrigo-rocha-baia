@@ -1,3 +1,5 @@
+import { GetStaticProps } from "next/types";
+
 import { Head } from "../components/Head";
 import { HomeForm } from "../components/Home/Form";
 import { Mockup } from "../components/Home/Mockup";
@@ -15,3 +17,9 @@ export default function Home() {
         </>
     );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+    return {
+        props: {}
+    };
+};

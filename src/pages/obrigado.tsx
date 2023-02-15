@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GetStaticProps } from "next/types";
 
 import { Head } from "../components/Head";
 import { ThankYouCard } from "../components/ThankYou/Card";
@@ -46,3 +47,9 @@ export default function ThankYou() {
         </>
     );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+    return {
+        props: {}
+    };
+};
