@@ -4,13 +4,13 @@ import MockupImage from "../../assets/images/mockup.png";
 
 export function Mockup() {
     return (
-        <div className="flex items-center justify-center w-full">
+        <div className="mt-16 sm:mt-0 flex items-center justify-center w-full">
             <Image
                 src={MockupImage}
                 alt="Mockup Plano Liberdade"
                 quality={100}
                 width={600}
-                className="ml-auto mr-4 max-w-[350px] 2xl:mr-0"
+                className="ml-auto max-w-[280px] sm:max-w-[350px] sm:mr-4 2xl:mr-0"
             />
         </div>
     );

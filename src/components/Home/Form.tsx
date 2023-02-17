@@ -28,17 +28,17 @@ export function HomeForm() {
     };
 
     return (
-        <div className="flex flex-col justify-center max-w-xl gap-4">
+        <div className="flex flex-col justify-center mt-16 sm:mt-0 sm:max-w-xl gap-4">
             <Image
                 src={Logo}
                 alt="Logo Plano Liberdade"
                 quality={100}
                 className="mx-auto"
             />
-            <h1 className="text-3xl font-black text-center uppercase">
+            <h1 className="text-lg sm:text-3xl font-black text-center uppercase">
                 <span className="text-primary-500">Sua independência financeira completa</span> está há 90 dias de distância!
             </h1>
-            <h2 className="text-sm font-bold text-center">
+            <h2 className="text-xs sm:text-sm font-bold text-center">
                 Liberte-se da falta de dinheiro e descubra como fazer mais de 10 mil reais por semana com um notebook e conexão com WiFi!
             </h2>
             <form className="flex flex-col gap-4" onSubmit={handleSubmit(handleRegister)}>
