@@ -7,6 +7,7 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
+                "mobile": "url('/bg_mobile.png')",
                 "home": "url('/bg_home.png')",
                 "home-xl": "url('/bg_home_xl.png')",
             },
@@ -18,6 +19,10 @@ module.exports = {
             }
         },
         screens: {
+            "sm": "640px",
+            "md": "768px",
+            "lg": "1024px",
+            "xl": "1280px",
             "2xl": "1536px",
         }
     },

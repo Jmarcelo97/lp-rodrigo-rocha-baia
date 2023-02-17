@@ -22,7 +22,7 @@ export default function ThankYou() {
             />
             <Head title="Obrigado" />
             <main className="h-screen w-screen">
-                <div className="flex flex-col items-center justify-center w-full mx-auto max-w-4xl">
+                <div className="flex flex-col items-center justify-center sm:h-full w-full mx-auto max-w-4xl">
                     <Image
                         src={Logo}
                         alt="Logo Plano Liberdade"
@@ -31,7 +31,7 @@ export default function ThankYou() {
                     />
                     <p className="flex gap-4 items-center mx-auto font-semibold text-xs sm:text-base">Aulão 28 de fevereiro ás 19h00</p>
                     <h1
-                        className="text-white text-lg sm:text-2xl sm:text-6xl font-bold text-center p-4"
+                        className="text-white text-lg sm:text-2xl  font-bold text-center p-4"
                     >Atenção! Sua inscrição não está confirmada...! <br /> Faltam apenas 2 passos para garantir sua vaga no Plano liberdade</h1>
                     <div className="flex flex-col sm:grid sm:grid-cols-2 gap-8 w-full p-4">
                         <ThankYouCard>
