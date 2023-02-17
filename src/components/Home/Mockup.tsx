@@ -4,7 +4,7 @@ import MockupImage from "../../assets/images/mockup.png";
 
 export function Mockup() {
     return (
-        <div className="mt-16 sm:mt-0 flex items-center justify-center w-full">
+        <div className="mt-16 sm:mt-0 hidden sm:flex items-center justify-center w-full">
             <Image
                 src={MockupImage}
                 alt="Mockup Plano Liberdade"
