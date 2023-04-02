@@ -39,7 +39,7 @@ export default function ThankYou() {
                             <p className="mb-4">Entre no grupo fechado de Whatsapp do Plano Liberdade. <b>As mensagens mais importantes serão enviadas por lá!</b></p>
                             <b className="mb-4">Clique no botão verde abaixo para entrar!</b>
                             <a
-                                href="https://chat.whatsapp.com/invite/7ZQ5ZQ2ZQZQJQZQZQZQZQZ"
+                                href="https://chat.whatsapp.com/EgltzzMtaXGCBXAmvU3bU4"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="bg-primary-400 text-white text-center text-xs sm:text-base font-bold rounded-full p-3 uppercase hover:brightness-75 transition duration-200 ease-in-out"
